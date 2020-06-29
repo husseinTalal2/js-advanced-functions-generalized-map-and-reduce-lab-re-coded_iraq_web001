@@ -10,7 +10,7 @@ function map(source, callback){
 function reduce(source, callback, startingPoint){
   let result = (startingPoint == undefined) ? 0:startingPoint;
   source.forEach(elem => {
-    result += callback(elem, memo);
+    result += callback(elem);
   })
   return result
 }
