@@ -7,8 +7,8 @@ function map(source, callback){
   return result
 }
 
-function reduce(source, callback){
-  let result;
+function reduce(source, callback, startingPoint){
+  let result = (startingPoint == undefined) ? 0:startingPoint;
   source.forEach(elem => {
     result += callback(elem);
   })
